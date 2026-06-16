@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mood Generator</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: white;
+  text-align: center;
+  padding-top: 100px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+button {
+  padding: 15px 25px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #e94560;
+  color: white;
+  margin-top: 20px;
+}
+
+button:hover {
+  background: #ff2e63;
+}
+
+#output {
+  margin-top: 40px;
+  font-size: 1.5rem;
+}
+</style>
+</head>
+
+<body>
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<h1>🎭 Mood Generator</h1>
+<p>Click the button to see your mood!</p>
+
+<button onclick="generateMood()">Get Mood</button>
+
+<div id="output"></div>
+
+<script>
+function generateMood() {
+  const moods = [
+    "😄 Happy - Today is going to be great!",
+    "😴 Sleepy - You need a nap ASAP.",
+    "🔥 Motivated - Go get something done!",
+    "😎 Chill - Relax and take it easy.",
+    "🤯 Overwhelmed - Breathe, you’ve got this.",
+    "🎉 Excited - Something good is coming!"
+  ];
+
+  const randomIndex = Math.floor(Math.random() * moods.length);
+  document.getElementById("output").innerText = moods[randomIndex];
+}
+</script>
+
+</body>
+</html>
